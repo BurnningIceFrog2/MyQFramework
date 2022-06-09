@@ -1,15 +1,9 @@
 using UnityEngine;
-using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public static class IUnSubscribeExtension
     {
-        /*private static ITypeEventSystem _eventSystem;
-        public static void SetEventSystem(ITypeEventSystem eventSystem)
-        {
-            _eventSystem = eventSystem;
-        }*/
-        public static void UnSubscribeOnGameobjectDestroyed(this  IUnSubscribe unSubscribe,GameObject gameObject) 
+        public static void UnSubScribeWhenGameObjectDestroyed(this  IUnSubscribe unSubscribe,GameObject gameObject) 
         {
             var trigger= gameObject.GetComponent<UnSubscribeOnDestroyTrigger>();
             if (!trigger) 

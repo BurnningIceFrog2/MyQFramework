@@ -1,6 +1,6 @@
 using System;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public class DefaultQueryResult<R> : IQueryResult<R>

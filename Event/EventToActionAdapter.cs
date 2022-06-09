@@ -1,11 +1,13 @@
 using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public struct EventToActionAdapter
     {
         private Action<IEvent> mAdapterAction;
-        public EventToActionAdapter(Action<IEvent> adapterAction) 
+        private int mHashCode;
+        public EventToActionAdapter(int hashCode,Action<IEvent> adapterAction) 
         {
+            mHashCode = hashCode;
             mAdapterAction = adapterAction;
         }
         public void Clear() 
@@ -15,6 +17,10 @@ namespace com.QFramework
         public Action<IEvent> GetAdapterAction() 
         {
             return mAdapterAction;
+        }
+        public int GetActionHashCode() 
+        {
+            return mHashCode;
         }
     }
 }

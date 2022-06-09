@@ -1,9 +1,8 @@
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public interface IArchitectureModule
     {
-        //怎么跟Architecture打交道？需要提供注册方法。
         void OnInit();
     }
 }

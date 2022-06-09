@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
     public class Singleton<T> where T:Singleton<T> 
     {

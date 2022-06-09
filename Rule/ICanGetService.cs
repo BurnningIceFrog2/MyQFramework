@@ -1,4 +1,4 @@
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     [InjectRule(typeof(IService))]
     public interface ICanGetService

@@ -1,6 +1,6 @@
 using System;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     [AttributeUsage(AttributeTargets.Field)]
     public class AutoInjectAttribute : Attribute

@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public static class IChainEventUnSubcribeExtension
     {
@@ -21,6 +21,11 @@ namespace com.QFramework
         public static IChainEventUnSubscribe NextEvent<T>(this IChainEventUnSubscribe self,Action<T> onEvent) where T:IEvent
         {
             return _typeEventSystem.SubscribeChainEvent(self.GetChainEventType(),onEvent);
+        }
+
+        public static void UnSubscribeAllEventsOnChain(this IChainEventUnSubscribe self) 
+        {
+            _typeEventSystem.UnSubscribeChainEvent(self.GetChainEventType());
         }
     }
 }

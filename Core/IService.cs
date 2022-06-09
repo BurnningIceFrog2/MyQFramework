@@ -1,6 +1,6 @@
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
-    public interface IService : ICanInject,ICanGetModel,ICanGetUtility,ICanSubscribeEvent,ICanTriggerEvent,ICanSendQuery
+    public interface IService : ICanInject,ICanGetService,ICanGetModel,ICanGetUtility,ICanSubscribeEvent,ICanTriggerEvent,ICanSendQuery
     {
         void OnInit();
     }

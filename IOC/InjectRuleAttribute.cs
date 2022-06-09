@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     [AttributeUsage(AttributeTargets.Interface)]
     public class InjectRuleAttribute : Attribute

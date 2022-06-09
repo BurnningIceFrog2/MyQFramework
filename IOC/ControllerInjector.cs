@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public class ControllerInjector : AbstractArchitectureComponentInjector
@@ -18,6 +17,10 @@ namespace com.QFramework
         {
             SetArchitecture(architecture);
             Dictionary<Type, List<InjectInfo>> injectionMap = GetInjectionMap();
+            if (injectionMap == null)
+            {
+                return;
+            }
             int injectionCount = injectionMap.Count;
             var types = injectionMap.Keys;
             if (injectionCount > 0)

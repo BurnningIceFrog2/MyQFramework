@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public class HungrySingleton<T> where T : HungrySingleton<T>
     {

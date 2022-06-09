@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public static class IArchitectureModuleExtension

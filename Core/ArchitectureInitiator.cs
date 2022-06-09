@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
     internal sealed class ArchitectureInitiator
     {

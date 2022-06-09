@@ -1,7 +1,6 @@
 using System;
-using System.Reflection;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public class TypeChecker:HungrySingleton<TypeChecker>
     {

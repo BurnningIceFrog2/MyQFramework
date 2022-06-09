@@ -1,4 +1,4 @@
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     [InjectRule(typeof(IUtility))]
     public interface ICanGetUtility

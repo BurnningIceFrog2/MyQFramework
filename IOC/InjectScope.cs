@@ -1,4 +1,5 @@
-namespace com.QFramework { 
+namespace LGUVirtualOffice.Framework
+{ 
     public enum InjectScope
     {
         Singleton,

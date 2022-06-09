@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
     public abstract class AbstractArchitecture<T>:IArchitecture where T:AbstractArchitecture<T>,new() 
     {
@@ -96,7 +96,7 @@ namespace com.QFramework
 
         public void RegisterUtility<K>() where K : IUtility, new()
         {
-            utilityContainer.Register<K>();
+            RegisterUtility(new K());
         }
 
         public void RegisterModel<K>(K modelInstance) where K : IModel
@@ -115,52 +115,5 @@ namespace com.QFramework
         {
             utilityContainer.Register(utilityInstance);
         }
-
-        /*public void SendCommand<K>() where K : ICommand,new()
-        {
-            SendCommand(new K());
-        }
-
-        public void SendCommand<K>(K command) where K : ICommand
-        {
-            command.Excute();
-        }
-
-        public R SendQuery<Q, R>() where Q : IQuery, new() 
-        {
-            return SendQuery<Q, R>(new Q());
-        }
-        public R SendQuery<Q, R>(Q queryInstance) where Q : IQuery 
-        {
-            return queryInstance.DoQuery<R>();
-        }
-        public void SendQueryAsync<Q, R>(Action<R> onQueryCompleted) where Q : IQueryAsync, new() 
-        {
-            SendQueryAsync<Q, R>(new Q(), onQueryCompleted);
-        }
-        public void SendQueryAsync<Q, R>(Q queryInstance, Action<R> onQueryCompleted) where Q : IQueryAsync
-        {
-            queryInstance.DoQueryAsync<R>(onQueryCompleted);
-        }
-
-        public void TriggerEvent<K>() where K : IEvent, new()
-        {
-            TriggerEvent(new K());
-        }
-
-        public void TriggerEvent<K>(K e) where K : IEvent
-        {
-            eventSystem.TriggerEvent(e);
-        }
-
-        public IUnSubscribe SubscribeEvent<K>(Action<K> onEvent) where K : IEvent
-        {
-            return eventSystem.SubscribeEvent(onEvent);
-        }
-
-        public void UnSubscribe<K>(Action<K> onEvent) where K : IEvent
-        {
-            eventSystem.UnSubscribeEvent(onEvent);
-        }*/
     }
 }

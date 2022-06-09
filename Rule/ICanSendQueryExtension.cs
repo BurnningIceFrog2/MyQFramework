@@ -1,5 +1,4 @@
-using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public static class ICanSendQueryExtension

@@ -1,4 +1,4 @@
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public static class ICanSendCommandExtension
@@ -10,7 +10,7 @@ namespace com.QFramework
             _commandHandler = commandHandler;
         }
 
-        public static void SendComand<T>(this ICanSendCommand self) where T : ICommand, new() 
+        public static void SendCommand<T>(this ICanSendCommand self) where T : ICommand, new() 
         {
             _commandHandler.ExcuteCommand<T>();
         }

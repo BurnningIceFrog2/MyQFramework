@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public class ModuleInitiator:IDisposable
     {

@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Threading;
-using System.Collections.Generic;
-using UnityEngine;
 using System.Threading.Tasks;
-using System;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public class DefaultQueryHandler : IQueryHandler
     {

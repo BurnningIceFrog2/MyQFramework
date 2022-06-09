@@ -1,5 +1,6 @@
 using System;
-namespace com.QFramework {
+namespace LGUVirtualOffice.Framework
+{
     public struct BindablePropertyUnSubscribe<T> : IUnSubscribe
     {
         private Action<T> _onPropertyChanged;

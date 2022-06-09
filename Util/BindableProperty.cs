@@ -1,6 +1,6 @@
 using System;
 
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
     public class BindableProperty<T>
     {
@@ -86,25 +86,6 @@ namespace com.QFramework
         public static implicit operator BindableProperty<T>(T value) 
         {
             return new BindableProperty<T>(value);
-        }
-        public static bool operator ==(BindableProperty<T> b1, BindableProperty<T> b2)
-        {
-            if (b1.Value == null && b2.Value == null)
-            {
-                return true;
-            }
-            else if (b1.Value == null)
-            {
-                return b2.Value.Equals(b1.Value);
-            }
-            else
-            {
-                return b1.Value.Equals(b2.Value);
-            }
-        }
-        public static bool operator !=(BindableProperty<T> b1, BindableProperty<T> b2)
-        {
-            return !(b1 == b2);
         }
     }
 }

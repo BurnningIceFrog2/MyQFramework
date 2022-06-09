@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public abstract class AbstractArchitectureComponentInjector : IArchitectureComponentInjector
     {

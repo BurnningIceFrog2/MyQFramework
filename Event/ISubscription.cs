@@ -1,13 +1,10 @@
-using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public interface ISubscription
     {
         int SubscribeCount { get; }
-        IUnSubscribe Subscribe(Action<IEvent> onEvent);
-        void UnSubscribe(Action<IEvent> onEvent);
         IUnSubscribe Subscribe(EventToActionAdapter adapter);
-        void UnSubscribe(EventToActionAdapter adapter);
+        bool UnSubscribe(int hashCode);
         void TriggerEvent(IEvent e);
     }
 }

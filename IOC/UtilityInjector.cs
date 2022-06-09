@@ -1,17 +1,33 @@
 using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
 
     public class UtilityInjector : AbstractArchitectureComponentInjector
     {
-        public UtilityInjector():base(typeof(IUtility)){ }
-        protected override object GetInjectInstance(Type injectType)
+        private Type utilityType;
+        public UtilityInjector():base(typeof(IUtility))
         {
-            return architectureInstance;
+            utilityType = typeof(IUtility);
         }
         protected override object GetInjectObject(Type baseType)
         {
-            return architectureInstance.GetUtility(baseType);
+            object instance = architectureInstance.GetUtility(baseType);
+            if (instance == null)
+            {
+                var interfaces = baseType.GetInterfaces();
+                foreach (var type in interfaces)
+                {
+                    if (utilityType.IsAssignableFrom(type)&&!utilityType.Equals(type))
+                    {
+                        instance = architectureInstance.GetService(type);
+                        if (instance != null)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            return instance;
         }
     }
 }

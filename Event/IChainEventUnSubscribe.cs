@@ -1,9 +1,8 @@
 using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public interface IChainEventUnSubscribe:IUnSubscribe
     {
-        void UnSubscribeAllEventsOnChain();
         Type GetChainEventType();
     }
 }

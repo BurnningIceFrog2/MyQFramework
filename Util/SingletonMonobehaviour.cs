@@ -1,7 +1,6 @@
 using UnityEngine;
-using System;
 
-namespace com.QFramework 
+namespace LGUVirtualOffice.Framework
 {
     public class SingletonMonobehaviour<T> : MonoBehaviour where T:SingletonMonobehaviour<T>
     {

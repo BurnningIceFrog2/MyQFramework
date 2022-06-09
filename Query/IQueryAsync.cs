@@ -1,5 +1,5 @@
 using System;
-namespace com.QFramework
+namespace LGUVirtualOffice.Framework
 {
     public interface IQueryAsync : ICanGetService, ICanGetModel, ICanGetUtility, ICanSubscribeEvent
     {
